@@ -11,7 +11,7 @@ exports.login = async (req, res) => {
         const user = await User.findOne({ email }); 
 
         if (!user) {
-            return res.render('login', {
+            return res.render('auth/login', {
                 title: "Login",
                 error: "User not found with that email",
             });
